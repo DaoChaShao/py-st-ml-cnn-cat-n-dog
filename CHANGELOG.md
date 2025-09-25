@@ -5,6 +5,7 @@
 
 ### Features
 
+- implement data preparation interface with image augmentation settings ([fe0f501](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/fe0f5012b2be8d9c34a0d62c8c1e74c036ae0bfe))
 - add CHANGELOG.md for version 0.1.0 with project features and updates ([302c924](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/302c9240c382a6b5d793aff2e05376a90b53c456))
 - add train.py file with initial metadata and encoding ([ad86adb](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/ad86adb6d821832db606f3ca051b11231290228d))
 - add initial test.py file with metadata and encoding ([270e550](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/270e55011142156bf1d5347f2c3b03d41eb4f50c))
@@ -29,6 +30,7 @@
 
 ### Chore
 
+- update CHANGELOG.md to reflect recent documentation updates and bug fixes ([9a940dd](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/9a940dd13f1986383cf14b3e2c638aa5fac4a835))
 - update CHANGELOG.md to include bug fixes section and recent changes ([a6168a1](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/a6168a1351ee7f513d34a1416e4051871f6298c6))
 
 ### Docs
