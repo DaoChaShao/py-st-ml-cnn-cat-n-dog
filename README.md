@@ -45,13 +45,20 @@ instructions as follows are only used to upload the large file to the remote rep
     the `token` as the password.
 11. When you push with `username` and `token` successfully first, you can continue to use the button of the UI interface
     to push the changes.
-12. You must **install Git LFS locally** before you clone the repository if you plan to get the
+12. If you use `username` and `password` to initialise the repository, and you use the `personal access token (PTA)` to
+    push the large files, you might fail to push the future changes with the `push` button of the UI. In this case, you
+    can close the LFS push function by running the following command:
+    ```bash
+    git config lfs.<remote-url>/info/lfs.locksverify
+    ```
+    Then, you can use the `push` button of the UI to push the changes.
+13. You must **install Git LFS locally** before you clone the repository if you plan to get the
     **full size of the data**. Otherwise, you will only get the pointer files. you can run the following command to
     install Git LFS:
     ```bash
-    git lfs install
+    git lfs uninstall
     ```
-13. (Optional) If you have already cloned the repository without Git LFS installed, you can run the following command to
+14. (Optional) If you have already cloned the repository without Git LFS installed, you can run the following command to
     fetch the actual large files:
     ```bash
     git lfs pull
