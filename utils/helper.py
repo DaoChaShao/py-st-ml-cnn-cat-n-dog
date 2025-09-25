@@ -46,7 +46,7 @@ class Timer(object):
         return f"{self._description} has NOT started."
 
 
-class TFKerasLogger(Callback):
+class StTFKLoggerForCategoricalLabels(Callback):
     """ Custom Keras Callback to log training metrics and update Streamlit placeholders.
     :param num_placeholders: a dictionary of Streamlit placeholders for metrics
     :return: None
@@ -77,7 +77,44 @@ class TFKerasLogger(Callback):
             for key, placeholder in self._placeholders.items():
                 if key in logs and placeholder is not None:
                     placeholder.metric(
-                        label=f"Epoch {epoch + 1}: {key.replace("val_", "valid ").capitalize()}",
+                        label=f"Epoch {epoch + 1}: {key.replace('val_', 'Valid ').capitalize()}",
+                        value=f"{logs[key]:.4f}"
+                    )
+
+    def get_history(self):
+        """ Get the training history."""
+        return self._history
+
+
+class StTFKLoggerForBinaryLabels(Callback):
+    """ Custom Keras Callback to log training metrics and update Streamlit placeholders.
+    :param num_placeholders: a dictionary of Streamlit placeholders for metrics
+    :return: None
+    """
+
+    def __init__(self, num_placeholders: dict = None):
+        super().__init__()
+        # The key name must match the callback logs
+        self._history = {k: [] for k in ["loss", "accuracy", "val_loss", "val_accuracy"]}
+        self._placeholders = num_placeholders
+
+    @override
+    def on_epoch_end(self, epoch, logs=None):
+        """ At the end of each epoch, log the metrics and update the placeholders.
+        :param epoch: the current epoch number
+        :param logs: the logs dictionary containing the metrics
+        :return: None
+        """
+        logs = logs or {}
+        # Save the training history per epoch
+        for key in self._history.keys():
+            self._history[key].append(logs.get(key, None))
+        # Update the placeholders with the latest metrics
+        if self._placeholders:
+            for key, placeholder in self._placeholders.items():
+                if key in logs and placeholder is not None:
+                    placeholder.metric(
+                        label=f"Epoch {epoch + 1}: {key.replace('val_', 'Valid ').capitalize()}",
                         value=f"{logs[key]:.4f}"
                     )
 
