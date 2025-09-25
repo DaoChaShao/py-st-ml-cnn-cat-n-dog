@@ -126,14 +126,14 @@ with sidebar:
 
             amount_batch_train: int = len(session_state["train_arr"]) - 1
             index_batch_train: int = number_input(
-                "Select train batch index",
+                "Select Train Batch Index",
                 min_value=0, max_value=amount_batch_train, value=0, step=1,
                 help="Select which train batch to display."
             )
             caption(f"Note: the train values are in [0, {amount_batch_train}].")
             amount_batch_test: int = len(session_state["test_arr"]) - 1
             index_batch_test: int = number_input(
-                "Select test batch index",
+                "Select Test Batch Index",
                 min_value=0, max_value=amount_batch_test, value=0, step=1,
                 help="Select which test batch to display."
             )
@@ -146,14 +146,14 @@ with sidebar:
 
             amount_image_train: int = len(train_images) - 1
             index_image_train: int = slider(
-                "Select train sample index in batch",
+                "Select Train Sample Index in Batch",
                 min_value=0, max_value=amount_image_train, value=0, step=1,
                 help="Select an index to display a specific image in the train dataset."
             )
             caption(f"Note: the index is in [0, {amount_image_train}].")
             amount_image_test: int = len(test_images) - 1
             index_image_test: int = slider(
-                "Select test sample index in batch",
+                "Select Test Sample Index in Batch",
                 min_value=0, max_value=amount_image_test, value=0, step=1,
                 help="Select an index to display a specific image in the test dataset."
             )
