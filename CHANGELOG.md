@@ -5,6 +5,10 @@
 
 ### Features
 
+- implement model training interface with session state management and metrics display ([a2ee4d0](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/a2ee4d08af8fa263212d065f9e9b250b42f2f7b3))
+- implement model testing interface with metrics display and sample prediction ([ea0222b](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/ea0222b0382518b58ed5a1b65801143ab00fd9f1))
+- enhance data preparation interface with target size input and loading conditions ([55d45d8](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/55d45d84bcac3e8480d1207e93132fe7a351a764))
+- add custom Keras callbacks for categorical and binary label logging ([efcd4be](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/efcd4be82c46aac8e5f0a2d06f83e0896c0185e1))
 - implement data preparation interface with image augmentation settings ([fe0f501](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/fe0f5012b2be8d9c34a0d62c8c1e74c036ae0bfe))
 - add CHANGELOG.md for version 0.1.0 with project features and updates ([302c924](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/302c9240c382a6b5d793aff2e05376a90b53c456))
 - add train.py file with initial metadata and encoding ([ad86adb](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/ad86adb6d821832db606f3ca051b11231290228d))
@@ -31,6 +35,7 @@
 
 ### Chore
 
+- update CHANGELOG.md to include recent bug fixes and updates ([323a484](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/323a4847581a366b38f4f939b45f013af7e2886a))
 - update CHANGELOG.md to include recent feature and documentation updates ([57ffc20](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/57ffc20fb81065668665c71c7246edfaa8bd80c3))
 - update CHANGELOG.md to reflect recent documentation updates and bug fixes ([9a940dd](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/9a940dd13f1986383cf14b3e2c638aa5fac4a835))
 - update CHANGELOG.md to include bug fixes section and recent changes ([a6168a1](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/a6168a1351ee7f513d34a1416e4051871f6298c6))
