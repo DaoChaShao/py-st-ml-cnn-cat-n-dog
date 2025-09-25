@@ -6,7 +6,8 @@
 **应用简介**
 ---
 本项目使用 Kaggle 上的 [Cat and Dog 数据集](https://www.kaggle.com/datasets/tongpython/cat-and-dog)
-进行卷积神经网络（CNN）的训练和测试。数据集包含猫和狗的图像，适合用于二分类任务和深度学习模型实验。
+进行卷积神经网络（CNN）的训练和测试。数据集包含猫和狗的图像，适合用于二分类任务和深度学习模型实验。本仓库提供一个 Streamlit
+应用，用于训练、测试和可视化卷积神经网络（CNN），实现猫狗二分类图像识别。支持从数据预处理到模型评估和单图预测的完整工作流程。
 
 **数据描述**
 ---
@@ -18,6 +19,27 @@
 - **测试集 (test)**  
   包含两个子数据集：猫和狗。去重后，每个子数据集各有 1000 张图像。  
   文件名格式同训练集，可直接用于标签推断。
+
+**特色功能**
+---
+
+- **数据预处理与增强**：支持图像旋转、宽高平移、剪切、缩放和水平翻转。
+- **批量加载**：训练和测试图像按批加载，可查看和选择单个样本。
+- **CNN 模型训练**：包含多层卷积、池化、Flatten 和全连接层的简单高效架构。
+- **实时训练指标**：自定义 Keras 回调在训练过程中更新 Streamlit 占位符，显示实时指标（损失、准确率）。
+- **模型测试与评估**：提供准确率、精确率、召回率、AUC 和 F1 分数等评价指标。
+- **单图预测**：可选择测试图像并即时预测标签。
+- **模型保存与加载**：训练完成的模型可保存并重新加载用于预测。
+- **Streamlit 集成**：交互式侧边栏设置、滑块和按钮操作便捷。
+
+**快速开始**
+---
+
+1. 将本仓库克隆到本地计算机。
+2. 使用以下命令安装所需依赖项：`pip install -r requirements.txt`
+3. 使用以下命令运行应用程序：`streamlit run main.py`
+4. 你也可以通过点击以下链接在线体验该应用：  
+   [![Static Badge](https://img.shields.io/badge/Open%20in%20Streamlit-Daochashao-red?style=for-the-badge&logo=streamlit&labelColor=white)](https://cnn-cat-n-dog.streamlit.app/)
 
 **大文件存储（LFS）**
 ---
@@ -53,15 +75,6 @@
     ```bash
     git lfs pull
     ```
-
-**快速开始**
----
-
-1. 将本仓库克隆到本地计算机。
-2. 使用以下命令安装所需依赖项：`pip install -r requirements.txt`
-3. 使用以下命令运行应用程序：`streamlit run main.py`
-4. 你也可以通过点击以下链接在线体验该应用：  
-   [![Static Badge](https://img.shields.io/badge/Open%20in%20Streamlit-Daochashao-red?style=for-the-badge&logo=streamlit&labelColor=white)](https://cnn-catanddog.streamlit.app/)
 
 **网页开发**
 ---
