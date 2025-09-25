@@ -38,12 +38,18 @@
     来代替访问 GitHub 资源库。如果您已经拥有令牌，请先运行命令 `git push origin main`。然后，输入 `username` 和 `token`
     作为密码。
 11. 当您第一次使用 `username` 和 `token` 成功推送后，您可以继续使用 UI 界面的按钮来推送更改。
-12. 在克隆仓库之前，**必须**先在**本地安装 Git LFS**，如果你打算获取**完整的数据文件**。否则，你只能得到指针文件。
+12. 如果您使用 `username` 和 `password` 初始化了仓库，并且使用 `personal access token (PTA)` 推送大文件，
+    则可能无法使用 UI 的 `push` 按钮推送将来的更改。在这种情况下，您可以通过运行以下命令关闭 LFS 推送功能：
+    ```bash
+    git config lfs.<remote-url>/info/lfs.locksverify
+    ```
+    然后，您可以使用 UI 的 `push` 按钮来推送更改。
+13. 在克隆仓库之前，**必须**先在**本地安装 Git LFS**，如果你打算获取**完整的数据文件**。否则，你只能得到指针文件。
     你可以运行以下命令来安装 Git LFS：
     ```bash
     git lfs install
     ```
-13. （可选）如果您已经在未安装 Git LFS 的情况下克隆了仓库，您可以运行以下命令来获取实际的大文件：
+14. （可选）如果您已经在未安装 Git LFS 的情况下克隆了仓库，您可以运行以下命令来获取实际的大文件：
     ```bash
     git lfs pull
     ```
