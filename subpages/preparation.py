@@ -6,11 +6,11 @@
 # @File     :   preparation.py
 # @Desc     :   
 
-from numpy import ceil
 from streamlit import (empty, sidebar, subheader, session_state, button,
                        rerun, caption, slider, selectbox, spinner,
                        number_input, columns, markdown, image)
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.utils import image_dataset_from_directory
 
 from utils.helper import Timer
 
@@ -20,7 +20,7 @@ col_train, col_test = columns(2, gap="small")
 pre_sessions: list[str] = ["pTimer", "train_datagen", "test_datagen", ]
 for session in pre_sessions:
     session_state.setdefault(session, None)
-load_sessions: list[str] = ["train_arr", "test_arr", "lTimer"]
+load_sessions: list[str] = ["train_arr", "test_arr", "lTimer", "target_size"]
 for session in load_sessions:
     session_state.setdefault(session, None)
 
@@ -30,7 +30,7 @@ TEST_PATH: str = "data/test"
 with sidebar:
     subheader("Data Preparation Settings")
 
-    if session_state["train_datagen"] is None:
+    if session_state["train_datagen"] is None and session_state["test_datagen"] is None:
         empty_messages.error("Please click the button below to preprocess the data.")
 
         rotation_range: int = slider(
@@ -81,13 +81,17 @@ with sidebar:
     else:
         print(type(session_state["train_datagen"]), type(session_state["test_datagen"]))
 
-        if session_state["train_arr"] is None:
-            target_size: int = number_input(
-                "Target Size", min_value=30, max_value=500, value=150, step=1,
+        if session_state["train_arr"] is None and session_state["test_arr"] is None:
+            empty_messages.info(f"{session_state["pTimer"]} You can load the processed data now.")
+
+            session_state["target_size"]: int = number_input(
+                "Target Size", min_value=30, max_value=500, value=256, step=1,
                 help="Dimensions to which all images found will be resized."
             )
+            caption("Note: **224*224** or **256*256** is recommended for transfer learning with pre-trained models.")
+
             batch_size_load: int = number_input(
-                "Batch Size for Load images", min_value=32, max_value=512, value=32, step=32,
+                "Batch Size for Load images", min_value=32, max_value=512, value=64, step=32,
                 help="Number of samples per gradient update for training."
             )
             class_mode: str = selectbox(
@@ -96,22 +100,22 @@ with sidebar:
             )
             caption(f"Cat and Dog dataset will be categorised into two classes with **{class_mode}**.")
 
-            empty_messages.info(f"{session_state["pTimer"]} You can load the processed data now.")
-
             if button("Load Processed Data", type="primary", width="stretch"):
                 with spinner("Loading processed data..."):
                     with Timer("Load Processed Data") as session_state["lTimer"]:
                         session_state["train_arr"] = session_state["train_datagen"].flow_from_directory(
                             TRAIN_PATH,
-                            target_size=(target_size, target_size),
+                            target_size=(session_state["target_size"], session_state["target_size"]),
                             batch_size=batch_size_load,
-                            class_mode=class_mode
+                            class_mode=class_mode,
+                            shuffle=True
                         )
                         session_state["test_arr"] = session_state["test_datagen"].flow_from_directory(
                             TEST_PATH,
-                            target_size=(target_size, target_size),
+                            target_size=(session_state["target_size"], session_state["target_size"]),
                             batch_size=batch_size_load,
-                            class_mode=class_mode
+                            class_mode=class_mode,
+                            shuffle=False
                         )
                 rerun()
         else:
