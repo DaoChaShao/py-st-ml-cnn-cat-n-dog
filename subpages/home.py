@@ -8,8 +8,8 @@
 
 from streamlit import title, expander, caption, empty
 
-empty_message = empty()
-empty_message.info("Please check the details at the different pages of core functions.")
+empty_messages = empty()
+empty_messages.info("Please check the details at the different pages of core functions.")
 
 title("Convolutional Neural Network (CNN) for Cat & Dog Classification")
 with expander("**INTRODUCTION**", expanded=True):
