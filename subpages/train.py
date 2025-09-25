@@ -66,7 +66,7 @@ with sidebar:
                     step=1,
                     help="Number of epochs to train the model.",
                 )
-                caption("Note: **64** batch size and **10** epochs are recommended for **QUICK** training.")
+                caption("Note: **25** batch size is recommended for **QUICK** training.")
 
                 if button("Train the CNN Model", type="primary", width="stretch"):
                     with spinner("Training the CNN Model...", show_time=True, width="stretch"):
