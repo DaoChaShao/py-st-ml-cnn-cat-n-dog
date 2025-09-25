@@ -26,10 +26,12 @@
 
 ### Bug Fixes
 
+- update session state variable names for data loading consistency ([4315f41](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/4315f41fe5eadd9a0e141b4515d86eb7d01a3302))
 - correct variable name for empty message in home.py ([dc29bdc](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/dc29bdc0de300f283f11de43793e8ebf4746bf31))
 
 ### Chore
 
+- update CHANGELOG.md to include recent feature and documentation updates ([57ffc20](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/57ffc20fb81065668665c71c7246edfaa8bd80c3))
 - update CHANGELOG.md to reflect recent documentation updates and bug fixes ([9a940dd](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/9a940dd13f1986383cf14b3e2c638aa5fac4a835))
 - update CHANGELOG.md to include bug fixes section and recent changes ([a6168a1](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/a6168a1351ee7f513d34a1416e4051871f6298c6))
 
