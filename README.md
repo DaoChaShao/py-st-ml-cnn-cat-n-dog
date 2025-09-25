@@ -7,7 +7,9 @@
 ---
 This project uses the [Cat and Dog dataset](https://www.kaggle.com/datasets/tongpython/cat-and-dog) from Kaggle to train
 and evaluate a Convolutional Neural Network (CNN). The dataset contains images of cats and dogs, suitable for binary
-classification tasks and deep learning experiments.
+classification tasks and deep learning experiments. This repository contains a Streamlit application for training,
+testing, and visualizing a Convolutional Neural Network (CNN) for binary image classification (Cats vs Dogs). It
+supports a full workflow from data preprocessing to model evaluation and single image prediction.
 
 **DATA DESCRIPTION**
 ---
@@ -19,6 +21,30 @@ classification tasks and deep learning experiments.
 - **Test Set (test)**  
   Contains two subsets: cats and dogs. After removing duplicates, each subset has 1,000 images.  
   Filenames follow the same format as the training set and can be used to infer labels.
+
+**FEATURES**
+---
+
+- **Data Preparation & Augmentation**: Preprocess images using rotation, width/height shift, shear, zoom, and horizontal
+  flip.
+- **Batch Loading**: Load training and testing images in batches, navigate and inspect individual samples.
+- **CNN Training**: Simple yet effective CNN architecture with multiple Conv2D, MaxPooling2D, Flatten, and Dense layers.
+- **Real-time Metrics Logging**: Custom Keras callbacks update Streamlit placeholders for live metrics (loss, accuracy)
+  during training.
+- **Model Testing & Evaluation**: Evaluate model with accuracy, precision, recall, AUC, and F1 score.
+- **Single Image Prediction**: Select a test image and predict its label instantly.
+- **Save & Load Model**: Save trained models and reload them for inference.
+- **Streamlit Integration**: Interactive sidebar settings, sliders, and buttons for smooth workflow.
+
+**QUICK START**
+---
+
+1. Clone the repository to your local machine.
+2. Install the required dependencies with the command `pip install -r requirements.txt`.
+3. Run the application with the command `streamlit run main.py`.
+4. You can also try the application by visiting the following
+   link:  
+   [![Static Badge](https://img.shields.io/badge/Open%20in%20Streamlit-Daochashao-red?style=for-the-badge&logo=streamlit&labelColor=white)](https://cnn-cat-n-dog.streamlit.app/)
 
 **LARGE FILE STORAGE (LFS)**
 ---
@@ -63,16 +89,6 @@ instructions as follows are only used to upload the large file to the remote rep
     ```bash
     git lfs pull
     ```
-
-**QUICK START**
----
-
-1. Clone the repository to your local machine.
-2. Install the required dependencies with the command `pip install -r requirements.txt`.
-3. Run the application with the command `streamlit run main.py`.
-4. You can also try the application by visiting the following
-   link:  
-   [![Static Badge](https://img.shields.io/badge/Open%20in%20Streamlit-Daochashao-red?style=for-the-badge&logo=streamlit&labelColor=white)](https://cnn-catanddog.streamlit.app/)
 
 **WEB DEVELOPMENT**
 ---
