@@ -108,12 +108,15 @@ with sidebar:
                         help="Select an index to display a specific image in the test dataset.",
                     )
                     caption(f"Note: the index is in [0, {amount_test}].")
+                    caption(f"Note: the image at test index **5** of batch **15** will surprise you.")
 
                     if button("Predict the Selected Sample", type="primary", width="stretch"):
                         with spinner("Predicting the selected sample", show_time=True, width="stretch"):
                             with Timer("Sample Prediction") as timer:
                                 with col_img:
-                                    empty_samp_title.markdown(f"### Test Sample at Index {index_test}")
+                                    empty_samp_title.markdown(
+                                        f"### Test Sample at Index {index_test} of epoch {index_batch}"
+                                    )
                                     image(
                                         test_images[index_test],
                                         caption=(
