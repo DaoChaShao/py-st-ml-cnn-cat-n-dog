@@ -27,3 +27,12 @@
 
 - correct variable name for empty message in home.py ([dc29bdc](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/dc29bdc0de300f283f11de43793e8ebf4746bf31))
 
+### Chore
+
+- update CHANGELOG.md to include bug fixes section and recent changes ([a6168a1](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/a6168a1351ee7f513d34a1416e4051871f6298c6))
+
+### Docs
+
+- update Chinese README with Git LFS usage and push configuration details ([bf72995](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/bf729952e4f8cbc24bb53821194ed6889b8751fa))
+- update README.md with Git LFS usage instructions and corrections ([20ffaf3](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/20ffaf3933517a9cd1257c6b9ba3c679d65f8d51))
+
