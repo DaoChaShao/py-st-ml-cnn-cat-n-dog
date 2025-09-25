@@ -5,6 +5,14 @@
 
 ### Features
 
+- update training prompt to recommend 25 batch size for quick training ([3206878](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/3206878280517ae202ade5863828540846ca6fe5))
+- update test sample display to include epoch information and add a note for index 5 of batch 15 ([fce69e2](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/fce69e2efd46f05098cfcb45e62cbbfe6e3338dd))
+- enhance Chinese README.md with detailed features and quick start instructions for the CNN application ([69db8f6](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/69db8f6016228b207ed22aa0bd0dc13cb047de20))
+- enhance README.md with detailed features and quick start instructions for the CNN application ([6068a79](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/6068a790a24b21ca2ba79443d083b63ec113dade))
+- update input prompts for batch and sample selection to improve clarity ([0739b70](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/0739b706c7fac04032f9df630ca306063b407dad))
+- enhance introduction section with detailed workflow and features of the CNN app ([ec3aee0](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/ec3aee024ee566a5f2401b2005c5639105cbc17a))
+- save the cnn_model.h5 with epoch 25 and batch size 64 ([d2c753c](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/d2c753c1f76270292f2d62f7b94983b37b70ca22))
+- update application information in about section with detailed features and functionalities ([45a8edb](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/45a8edb8f6e768fed2a6fc6560aa8bc14fa76d4c))
 - implement model training interface with session state management and metrics display ([a2ee4d0](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/a2ee4d08af8fa263212d065f9e9b250b42f2f7b3))
 - implement model testing interface with metrics display and sample prediction ([ea0222b](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/ea0222b0382518b58ed5a1b65801143ab00fd9f1))
 - enhance data preparation interface with target size input and loading conditions ([55d45d8](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/55d45d84bcac3e8480d1207e93132fe7a351a764))
@@ -35,6 +43,7 @@
 
 ### Chore
 
+- update CHANGELOG.md to include recent feature additions and improvements ([af843dd](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/af843ddf8c2af6459392093673bcbe81bdb19851))
 - update CHANGELOG.md to include recent bug fixes and updates ([323a484](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/323a4847581a366b38f4f939b45f013af7e2886a))
 - update CHANGELOG.md to include recent feature and documentation updates ([57ffc20](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/57ffc20fb81065668665c71c7246edfaa8bd80c3))
 - update CHANGELOG.md to reflect recent documentation updates and bug fixes ([9a940dd](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/9a940dd13f1986383cf14b3e2c638aa5fac4a835))
