@@ -38,11 +38,14 @@
 
 ### Bug Fixes
 
+- correct spelling of "Licence" in README.zh-CN.md ([0438daf](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/0438daf9cf61eba46bdfbf9bef7545e332c38369))
+- correct spelling of "Licence" in README.md ([eaf2fd1](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/eaf2fd10797a7ead6bb6f18b9c8734364d847e65))
 - update session state variable names for data loading consistency ([4315f41](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/4315f41fe5eadd9a0e141b4515d86eb7d01a3302))
 - correct variable name for empty message in home.py ([dc29bdc](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/dc29bdc0de300f283f11de43793e8ebf4746bf31))
 
 ### Chore
 
+- update CHANGELOG.md to reflect recent changes and improvements ([95d0fac](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/95d0facd991a22563d3e9107eaf013c67c5630ed))
 - delete the cnn model ([1dc624d](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/1dc624db7c6428b27fd32f5ba8b73f4e734ba9ee))
 - update CHANGELOG.md to include recent feature additions and improvements ([8a1fb9d](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/8a1fb9db4dfc46dcb9b58d935e286f6ddb5939f5))
 - update CHANGELOG.md to include recent bug fixes and updates ([323a484](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/323a4847581a366b38f4f939b45f013af7e2886a))
