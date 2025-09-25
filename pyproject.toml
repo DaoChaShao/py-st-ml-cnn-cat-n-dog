@@ -1,0 +1,18 @@
+# This configuration is used to generate the changelog between GitHub and the Gitee platform
+
+[tool.git-changelog]
+bump = "auto"                                                                               # Update the version number automatically
+convention = "conventional"                                                                 # Use the conventional commit convention
+in-place = false                                                                            # Overwrite the changelog file
+filter-commits = ""                                                                         # Filter commits
+marker-line = "<!-- insertion marker for GitHub -->"                                        # Insertion marker
+output = "CHANGELOG.md"                                                                     # Output the name of the file
+parse-refs = true                                                                           # Whether to parse refs
+parse-trailers = true                                                                       # Whether to parse trailers
+provider = "github"                                                                         # Use the GitHub provider
+repository = "."                                                                            # The current repository
+sections = ["feat", "fix", "chore", "docs", "perf", "build", "refactor", "test", "deps"]    # The sections of the changelog
+template = "angular"                                                                        # The template of the changelog
+version-regex = "^## \\[(?P<version>v?[^\\]]+)"                                             # The version regex
+versioning = "semver"                                                                       # semver and pep440
+zerover = false
