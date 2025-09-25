@@ -5,6 +5,7 @@
 
 ### Features
 
+- add CHANGELOG.md for version 0.1.0 with project features and updates ([302c924](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/302c9240c382a6b5d793aff2e05376a90b53c456))
 - add train.py file with initial metadata and encoding ([ad86adb](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/ad86adb6d821832db606f3ca051b11231290228d))
 - add initial test.py file with metadata and encoding ([270e550](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/270e55011142156bf1d5347f2c3b03d41eb4f50c))
 - add requirements.txt for project dependencies ([bd35f20](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/bd35f206352395e702f70b9c77200b2d5edc2102))
@@ -21,4 +22,8 @@
 - add __init__.py with main function template ([0380db5](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/0380db572c3b9e777d8207e2a597549a62bb6b51))
 - add .gitignore to exclude IDE, environment, and system files ([114e538](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/114e53896b197d0b86cf2161dc187ab8e886cdb5))
 - add .gitignore to exclude IDE and environment files ([f51de58](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/f51de58efe9bbf3da23572272f52794ae892284d))
+
+### Bug Fixes
+
+- correct variable name for empty message in home.py ([dc29bdc](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/dc29bdc0de300f283f11de43793e8ebf4746bf31))
 
