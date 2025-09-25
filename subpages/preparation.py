@@ -20,7 +20,7 @@ col_train, col_test = columns(2, gap="small")
 pre_sessions: list[str] = ["pTimer", "train_datagen", "test_datagen", ]
 for session in pre_sessions:
     session_state.setdefault(session, None)
-load_sessions: list[str] = ["trainer", "tester", "lTimer"]
+load_sessions: list[str] = ["train_arr", "test_arr", "lTimer"]
 for session in load_sessions:
     session_state.setdefault(session, None)
 
@@ -81,7 +81,7 @@ with sidebar:
     else:
         print(type(session_state["train_datagen"]), type(session_state["test_datagen"]))
 
-        if session_state["trainer"] is None:
+        if session_state["train_arr"] is None:
             target_size: int = number_input(
                 "Target Size", min_value=30, max_value=500, value=150, step=1,
                 help="Dimensions to which all images found will be resized."
@@ -101,13 +101,13 @@ with sidebar:
             if button("Load Processed Data", type="primary", width="stretch"):
                 with spinner("Loading processed data..."):
                     with Timer("Load Processed Data") as session_state["lTimer"]:
-                        session_state["trainer"] = session_state["train_datagen"].flow_from_directory(
+                        session_state["train_arr"] = session_state["train_datagen"].flow_from_directory(
                             TRAIN_PATH,
                             target_size=(target_size, target_size),
                             batch_size=batch_size_load,
                             class_mode=class_mode
                         )
-                        session_state["tester"] = session_state["test_datagen"].flow_from_directory(
+                        session_state["test_arr"] = session_state["test_datagen"].flow_from_directory(
                             TEST_PATH,
                             target_size=(target_size, target_size),
                             batch_size=batch_size_load,
@@ -117,17 +117,17 @@ with sidebar:
         else:
             empty_messages.info(f"{session_state["pTimer"]}. Data loaded successfully.")
 
-            print(type(session_state["trainer"]), type(session_state["tester"]))
-            print(len(session_state["trainer"]), len(session_state["tester"]))
+            print(type(session_state["train_arr"]), type(session_state["test_arr"]))
+            print(len(session_state["train_arr"]), len(session_state["test_arr"]))
 
-            amount_batch_train: int = len(session_state["trainer"]) - 1
+            amount_batch_train: int = len(session_state["train_arr"]) - 1
             index_batch_train: int = number_input(
                 "Select train batch index",
                 min_value=0, max_value=amount_batch_train, value=0, step=1,
                 help="Select which train batch to display."
             )
             caption(f"Note: the train values are in [0, {amount_batch_train}].")
-            amount_batch_test: int = len(session_state["tester"]) - 1
+            amount_batch_test: int = len(session_state["test_arr"]) - 1
             index_batch_test: int = number_input(
                 "Select test batch index",
                 min_value=0, max_value=amount_batch_test, value=0, step=1,
@@ -135,8 +135,8 @@ with sidebar:
             )
             caption(f"Note: the test values are in [0, {amount_batch_test}].")
 
-            train_images, train_labels = session_state["trainer"][index_batch_train]
-            test_images, test_labels = session_state["tester"][index_batch_test]
+            train_images, train_labels = session_state["train_arr"][index_batch_train]
+            test_images, test_labels = session_state["test_arr"][index_batch_test]
             print(type(train_images), type(test_images))
             print(train_images.shape, test_images.shape)
 
