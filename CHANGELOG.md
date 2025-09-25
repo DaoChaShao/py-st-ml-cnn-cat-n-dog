@@ -43,7 +43,8 @@
 
 ### Chore
 
-- update CHANGELOG.md to include recent feature additions and improvements ([af843dd](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/af843ddf8c2af6459392093673bcbe81bdb19851))
+- delete the cnn model ([1dc624d](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/1dc624db7c6428b27fd32f5ba8b73f4e734ba9ee))
+- update CHANGELOG.md to include recent feature additions and improvements ([8a1fb9d](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/8a1fb9db4dfc46dcb9b58d935e286f6ddb5939f5))
 - update CHANGELOG.md to include recent bug fixes and updates ([323a484](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/323a4847581a366b38f4f939b45f013af7e2886a))
 - update CHANGELOG.md to include recent feature and documentation updates ([57ffc20](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/57ffc20fb81065668665c71c7246edfaa8bd80c3))
 - update CHANGELOG.md to reflect recent documentation updates and bug fixes ([9a940dd](https://github.com/DaoChaShao/py-st-ml-cnn-cat-n-dog/commit/9a940dd13f1986383cf14b3e2c638aa5fac4a835))
